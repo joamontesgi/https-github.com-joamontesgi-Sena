@@ -21,8 +21,9 @@ include("backend/baseDatos.php");
     <a href="crearCentro.php" type="button" class="btn btn-primary">Crear Centro</a>
     <a href="eliminarCentro.php" type="button" class="btn btn-primary">Eliminar Centro</a>    
     <a href="crearFicha.php" type="button" class="btn btn-primary">Crear Ficha</a>
-    <a href="deleteFicha.php" type="button" class="btn btn-primary">Eliminar Ficha</a>
-    
+    <a href="eliminarFicha.php" type="button" class="btn btn-primary">Eliminar Ficha</a>
+    <a href="crearPrograma.php" type="button" class="btn btn-primary">Crear Programa</a>
+    <a href="eliminarPrograma.php" type="button" class="btn btn-primary">Eliminar Programa</a>
 
 
    <!--    <button type="button" class="btn btn-primary">Consultar Ficha</button> -->

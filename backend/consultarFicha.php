@@ -2,7 +2,8 @@
 
 require ("baseDatos.php");
 
-$id=(int)$idCentro;
+
+	$id=(int)$idCentro;
 
 
 $consultas="SELECT * FROM fichas
@@ -17,7 +18,13 @@ if ($numReg>0) {
         echo "<option value=".$fila['nombre_cent'].">".$fila['nombre_cent']."</option>";
     }
 }else{
-    echo "No hay datos en la base de datos";
+    echo "No hay datos en la base de datoas";
 }
+
+
+
+
+
+
 
 ?>
