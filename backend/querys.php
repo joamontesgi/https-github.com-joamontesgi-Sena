@@ -26,6 +26,14 @@ function eliminar($mysqli, $table,$where){
 		$resultado=mysqli_query($mysqli,$query);
 }
 
+function actualizar($mysqli, $table, $colum, $value, $where){
+		$query="UPDATE $table
+		SET $colum=$value
+		WHERE $where
+		";
+		$resultado=mysqli_query($mysqli,$query);
+}
+
 
 
 

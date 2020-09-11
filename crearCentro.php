@@ -1,51 +1,52 @@
  <?php
-include("headerCalidad.php");
-include("backend/activeSession.php");
-include("backend/consultarRegional.php");
+ include("headerCalidad.php");
+ include("backend/activeSession.php");
+ include("backend/consultarRegional.php");
 
 
  ?>
  
 
-<main id="main">
+ <main id="main">
 
   <br>
   <br>
   <br>
   <div style="text-align: center;">
-  <form method="post" action="backend/guardarCentro.php">
-    <div>
-       <h4>Por favor seleccione a qué regional pertenece el centro a crear<select class="form-control form-control-lg" name="region" id="region">
-          <?php
-            if ($numReg>0) {
+    <form method="post" action="backend/guardarCentro.php">
+      <div>
+        <h4>Por favor seleccione a qué regional pertenece el centro a crear<select class="form-control form-control-lg" name="region" id="region" required>
+        <?php
+        if ($numReg>0) {
 
-                while($fila = mysqli_fetch_array($resultado)){ 
-              echo "<option value=".$fila['id_regi'].">".$fila['nombre_regi']."</option>";
-       
-              }
-            }else{
-                echo "No hay datos en la base de datos";
-            }
-            ?>
+         echo "<option value='-1'>Seleccione una regional.</option>";
+         while($fila = mysqli_fetch_array($resultado)){ 
+          echo "<option value=".$fila['id_regi'].">".$fila['nombre_regi']."</option>";
 
-            </select>
-            <br>
+        }
+      }else{
+        echo "No hay datos en la base de datos";
+      }
+      ?>
+
+    </select>
+    <br>
 
 
     <label for="input">Ingrese el nombre del centro que desea crear: </label>
     <input type="text"  name="centro" id="input" aria-describedby="centro" placeholder="Ejemplo: Centro de software" required> 
-    </div>
-    <button type="submit" class="btn btn-primary">Guardar</button>
-    <br>
-  </form>
   </div>
+  <button type="submit" class="btn btn-primary">Guardar</button>
   <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+</form>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 </main>
 
 <?php

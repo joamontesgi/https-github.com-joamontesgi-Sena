@@ -8,7 +8,7 @@ if (isset($idCentro)) {
 
 	include("backend/consultarFicha.php");
 
-	
+		      echo "<option value='-1'>Seleccione una ficha...</option>";
 	while($row = mysqli_fetch_array($resul2)){ 
 
 	     $html.="<option value=".$row['id_ficha'].">".$row['numero_ficha']."</option>";

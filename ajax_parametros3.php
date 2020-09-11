@@ -12,12 +12,6 @@ $resul2=mysqli_query($mysqli, $consultas) or die("Error");
 
 
 
-while($row = mysqli_fetch_array($resul2)){ 
-	echo $row['nombres_inst'];
-	echo "<br>";
-	  
-	}   
-
 
 
 

@@ -14,7 +14,8 @@ include("backend/consultarRegional.php");
   <br>
   <div style="text-align: center;">
   <form method="post" action="backend/delete.php">
-
+    <input type="text" name="nameRegion"> 
+    
         <h4>Por favor seleccione la regional que desea eliminar<select class="form-control form-control-lg" name="region" id="region">
           <?php
             if ($numReg>0) {
@@ -33,7 +34,8 @@ include("backend/consultarRegional.php");
 
 
     <br>
-    <button type="submit" class="btn btn-primary">Eliminar</button>
+    <button type="submit" class="btn btn-primary" name="eliminar">Eliminar</button>
+    <button type="submit" class="btn btn-primary" name="actualizar">Actualizar</button>
   </form>
   </div>
   <br>
