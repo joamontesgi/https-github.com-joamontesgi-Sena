@@ -55,7 +55,7 @@
           <li class="active"><a href="inicioCalidad.php">Inicio</a></li>
           <li><a href="gestion.php" style="color: black;">Gestión</a></li>
           <li><a href="consultar.php" style="color: black;">Consultar</a></li>
-          <li><a href="#" style="color: black;">Reportes</a></li>
+         
           <li><a href="backend/closeSession.php  ?>" style="color: black;">Cerrar sesión</a></li>
         </ul>
       </nav><!-- .nav-menu -->

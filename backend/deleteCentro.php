@@ -7,7 +7,7 @@ require ("baseDatos.php");
 $consultas="SELECT id_cent, nombre_cent FROM centro
 ";
 
-$resul=mysqli_query($mysqli, $consultas) or die("Error".pg_last_error());
+$resul=mysqli_query($mysqli, $consultas) or die("Error");
 $totalRegistros=mysqli_num_rows($resul);
 // if ($numReg>0) {
 

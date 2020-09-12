@@ -2,7 +2,7 @@
 include("headerCalidad.php");
 include("backend/activeSession.php");
 include("backend/baseDatos.php");
-include("backend/consultarRegional.php");
+include("backend/consultarProgramaDelete.php");
 
  ?>
  
@@ -13,20 +13,19 @@ include("backend/consultarRegional.php");
   <br>
   <br>
   <div style="text-align: center;">
-  <form method="post" action="backend/delete.php">
+  <form method="post" action="backend/deletePrograma.php">
     <!-- <input type="text" name="nameRegion">  -->
     
-        <h4>Por favor seleccione la regional que desea eliminar<select class="form-control form-control-lg" name="region" id="region">
+        <h4>Por favor seleccione el programa que desea eliminar<select class="form-control form-control-lg" name="programa" id="programa">
           <?php
-            if ($numReg>0) {
-                     echo "<option value='-1'>Seleccione una ficha...</option>" ;
-                while($fila = mysqli_fetch_array($resultado)){ 
-              echo "<option value=".$fila['id_regi'].">".$fila['nombre_regi']."</option>";
-       
-              }
-            }else{
-                echo "No hay datos en la base de datos";
-            }
+    if ($totalRegistros>0) {
+
+  echo "<option value='-1'>Seleccione un programa...</option>";
+    while ($fila=mysqli_fetch_array($resul2)) {
+
+        echo "<option value=".$fila['id_prog'].">".$fila['nombre_prog']."</option>";
+    }
+}
             ?>
 
             </select>

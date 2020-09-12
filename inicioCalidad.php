@@ -17,12 +17,9 @@ include("backend/activeSession.php");
           <div class="row">
             <div class="col">
               <a href="gestion.php"><img src="assets/img/gestion.png" class="img-fluid" style="width: 200px; height: 200px;">
-             <p>Gestión </p></a>
+             <p>Gestión de la aplicación </p></a>
             </div>
-            <div class="col">
-              <a href="backend/moduloReportes/pdf/Reporte.php"><img src="assets/img/Reporte.png" class="same" style="width: 200px; height: 200px;">
-             <p>Reportes</p></a>
-            </div>
+     
           </div>
       </div>
   </div>

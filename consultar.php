@@ -10,7 +10,6 @@
 
    <div class="position-relative  p-3 p-md-5 m-md-2 text-center ">
     <div class="col-md-5 p-lg-3 mx-auto my-2">
-      <h2 class="display-5 font-weight-normal">Resultados de Evaluación para la Formación</h2>
       <p class="lead font-weight-normal">Opciones de Consulta</p>
     </div>
 
@@ -61,8 +60,8 @@
         <h4>Programa<select class="form-control form-control-lg" name="programa" id="programa" required="Debes seleccionar un programa para ver los cambios">
           <?php
           if ($totalRegistros>0) {
-           echo "<option value='-1'>Seleccione un programa...</option>";
 
+           echo "<option value='-1'>Seleccione un programa...</option>";
            while ($fila=mysqli_fetch_array($resul2)) {
 
             echo "<option value=".$fila['id_prog'].">".$fila['nombre_prog']."</option>";
@@ -75,19 +74,23 @@
       </select>
       <br>
       <h4>Instructores
-        <br>
-        <div style="background-color: orange;" name="instructor" id="instructor">
-          <?php
-          while($row = mysqli_fetch_array($resul2)){ 
-            
+        <br>  <br>
+        <div style="background-color: #bdecb6;" name="instructor" id="instructor">
+
+            <?php
+
+
+            while($row = mysqli_fetch_array($resul2)){ 
+
+              ?>
+              <td style="text-align: center;"><?php echo $row['nombres_inst']; ?></td>
+               <td style="text-align: center;"><?php echo $row['correo']; ?></td>
+              <?php
+            }   
+
+
             ?>
-            <td style="text-align: center;"><?php echo $row['nombres_inst']; ?></td>
-
-          <?php
-          }     
-
-
-          ?>
+          </table>
         </div>
         <br>
 
@@ -169,7 +172,7 @@
     $("#programa").change(function(){
 
       var parametro="id="+$("#programa").val();
-
+      // alert(parametro);
       $.ajax({
         data:  parametro,
         url:   'ajax_parametros3.php',

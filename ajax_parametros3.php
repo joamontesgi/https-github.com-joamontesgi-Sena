@@ -1,6 +1,7 @@
 <?php
 require ("backend/baseDatos.php");
 
+
 $idPrograma=$_POST['id'];
 
 
@@ -11,7 +12,22 @@ WHERE programa='$idPrograma'";
 $resul2=mysqli_query($mysqli, $consultas) or die("Error");
 
 
+$i=1;
 
+ 
+while($row = mysqli_fetch_array($resul2)){ 
+	echo "Instructor número ",$i;
+	echo "<br>";
+	echo "<i> Nombre del instructor: </i>","<b>", $row['nombres_inst']; 
+	echo "</b>";
+	echo "<br>";
+	echo " <i> Correo del instructor:  </i>","<b>", $row['correo'];
+	echo "</b>";
+	echo "<br>";
+	echo "<hr>";
+	$i=$i+1;
+	
+}   
 
 
 
@@ -25,7 +41,7 @@ $resul2=mysqli_query($mysqli, $consultas) or die("Error");
 
 // 	include("backend/consultarInstructor.php");
 
-	
+
 // 	while($row = mysqli_fetch_array($resultado)){ 
 // 	    $html.="<option value=".$row['instructor.id_inst'].">".$row['instructor.nombres_inst']."</option>";
 // 	}            

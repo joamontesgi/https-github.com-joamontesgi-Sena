@@ -8,6 +8,7 @@ error_reporting(0);
 $nombreCalidad=$_SESSION['nombre_cali'];
 
 $nombreApre=$_SESSION['nombres_apre'];
+$idApre=$_SESSION['id_apre'];
 
 if ( ($nombreApre== null || $nombreApre=='') AND ($nombreCalidad== null || $nombreCalidad=='') )   {
 

@@ -17,7 +17,7 @@ include("backend/deleteCentro.php");
         <h4>Por favor seleccione el centro que desea eliminar<select class="form-control form-control-lg" name="centro" id="centro">
           <?php
             if ($totalRegistros>0) {
-
+                     echo "<option value='-1'>Seleccione un centro...</option>" ;
                 while($fila = mysqli_fetch_array($resul)){ 
               echo "<option value=".$fila['id_cent'].">".$fila['nombre_cent']."</option>";
        
